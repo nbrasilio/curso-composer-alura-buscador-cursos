@@ -1,0 +1,43 @@
+{
+    "name": "nelsonbrasilio/buscador-cursos-alura",
+    "description": "Projeto que busca cursos no site da alura",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Nelson Brasilio",
+            "email": "nbrasilio@hotmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.0",
+        "symfony/dom-crawler": "^5.1",
+        "symfony/css-selector": "^5.1",
+        "masterminds/html5": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Alura\\BuscadorDeCursos\\" : "src"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.2",
+        "squizlabs/php_codesniffer": "^3.5",
+        "phan/phan": "^3.1"
+    },
+    "scripts": {
+        "test": "phpunit tests\\TestBuscadorDeCursos.php",
+        "cs": "phpcs --standard=PSR12 src/",
+        "phan": "phan --allow-polyfill-parser",
+        "check": [
+            "@phan",
+            "@cs",
+            "@test"
+        ],
+        "post-update-cmd": [
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT"
+    }
+}
