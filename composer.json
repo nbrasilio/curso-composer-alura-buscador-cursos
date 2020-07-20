@@ -43,5 +43,6 @@
     "scripts-descriptions": {
         "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT"
     },
-    "license": "NBSJ-1.0.0"
+    "license": "NBSJ-1.0.0",
+    "bin": ["buscar-cursos.php"]
 }
