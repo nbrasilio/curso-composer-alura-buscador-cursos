@@ -15,6 +15,9 @@
         "masterminds/html5": "^2.7"
     },
     "autoload": {
+        "files": [
+            "functions.php"
+        ],
         "psr-4": {
             "Alura\\BuscadorDeCursos\\" : "src"
         }
@@ -39,5 +42,6 @@
     },
     "scripts-descriptions": {
         "check": "Roda as verificações do código. PHAN, PHPCS e PHPUNIT"
-    }
+    },
+    "license": "NBSJ-1.0.0"
 }
